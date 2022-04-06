@@ -32,6 +32,7 @@ const renderList = async () => {
     // tasksElem.appendChild(taskElem);
 
     const taskElem = document.createElement('div');
+    taskElem.setAttribute('id', task.id);
     taskElem.innerHTML = `
    <input type="checkbox"/> 
    <div>${task.text}</div>
@@ -43,9 +44,15 @@ const renderList = async () => {
   textElem.value = '';
   textElem.focus();
   const deleteButtonElems = document.querySelectorAll('.btnDelete');
-  deleteButtonElems.forEach(m => m.addEventListener('click', (e) => {
+  deleteButtonElems.forEach(m => m.addEventListener('click', async (e) => {
     e.preventDefault();
-    console.log('delete');
+    const currentTaskElem = m.parentElement;
+    const currentId = currentTaskElem.getAttribute('id');
+    const requestOptions = {
+      method: 'DELETE'
+    };
+    const response = await fetch(`http://localhost:5011/todos/${currentId}`, requestOptions);
+    renderList();
   }));
 };
 

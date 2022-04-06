@@ -6,3 +6,6 @@
 - x put event on button
 	- x prevent default
 - .. delete button works
+
+
+- do checkbox
