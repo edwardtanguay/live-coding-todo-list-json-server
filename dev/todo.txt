@@ -3,5 +3,6 @@
 - x get tasks from json-server
 - x display tasks from json-server
 
-- .. put event on button
-	- prevent default
+- x put event on button
+	- x prevent default
+- .. delete button works

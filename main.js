@@ -26,13 +26,27 @@ const renderList = async () => {
   tasksElem.innerHTML = '';
   const tasks = await getTasks();
   tasks.forEach(task => {
+    // const taskElem = document.createElement('div');
+    // taskElem.innerHTML = task.text;
+    // taskElem.classList.add('task');
+    // tasksElem.appendChild(taskElem);
+
     const taskElem = document.createElement('div');
-    taskElem.innerHTML = task.text;
+    taskElem.innerHTML = `
+   <input type="checkbox"/> 
+   <div>${task.text}</div>
+   <button class="btnDelete">delete</button>
+    `;
     taskElem.classList.add('task');
     tasksElem.appendChild(taskElem);
   });
   textElem.value = '';
   textElem.focus();
+  const deleteButtonElems = document.querySelectorAll('.btnDelete');
+  deleteButtonElems.forEach(m => m.addEventListener('click', (e) => {
+    e.preventDefault();
+    console.log('delete');
+  }));
 };
 
 renderList();

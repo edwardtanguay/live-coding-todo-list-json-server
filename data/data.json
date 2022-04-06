@@ -11,44 +11,9 @@
       "finished": false
     },
     {
-      "text": "dfdf",
+      "text": "buy milk",
       "finished": false,
       "id": 3
-    },
-    {
-      "text": "fourth todo",
-      "finished": false,
-      "id": 4
-    },
-    {
-      "text": "dfdf",
-      "finished": false,
-      "id": 5
-    },
-    {
-      "text": "sixth todo",
-      "finished": false,
-      "id": 6
-    },
-    {
-      "text": "seventh todo",
-      "finished": false,
-      "id": 7
-    },
-    {
-      "text": "8th todo",
-      "finished": false,
-      "id": 8
-    },
-    {
-      "text": "9th todo",
-      "finished": false,
-      "id": 9
-    },
-    {
-      "text": "10th todo",
-      "finished": false,
-      "id": 10
     }
   ]
 }
