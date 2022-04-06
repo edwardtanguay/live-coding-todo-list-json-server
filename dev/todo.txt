@@ -1,7 +1,7 @@
 - x fix bug
 - x style
-- .. get tasks from json-server
-- display tasks from json-server
+- x get tasks from json-server
+- x display tasks from json-server
 
-- put event on button
+- .. put event on button
 	- prevent default

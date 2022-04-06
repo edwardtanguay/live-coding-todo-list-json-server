@@ -17,7 +17,9 @@ const tasksElem = document.querySelector('.tasks');
 
 const getTasks = async () => {
   const response = await fetch('http://localhost:5011/todos');
-  return response.json();
+  const data = await response.json();
+  console.log(data);
+  return data;
 };
 
 const renderList = async () => {
@@ -27,10 +29,24 @@ const renderList = async () => {
     taskElem.innerHTML = task.text;
     taskElem.classList.add('task');
     tasksElem.appendChild(taskElem);
-
   });
-}
-
+};
 
 renderList();
 
+btnAddElem.addEventListener('click', async (e) => {
+  e.preventDefault();
+
+  const newTodo = {
+    "text": textElem.value,
+    "finished": false
+  };
+
+  const requestOptions = {
+    method: 'POST',
+    body: JSON.stringify(newTodo),
+    headers: { "Content-type": "application/json; charset=UTF-8" }
+  };
+  const response = await fetch('http://localhost:5011/todos', requestOptions);
+  return await response.json();
+});
