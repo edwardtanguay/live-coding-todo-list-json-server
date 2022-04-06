@@ -4,6 +4,11 @@
 			"id": 1,
 			"text": "go to the store",
 			"finished": false
+		},
+		{
+			"id": 2,
+			"text": "go to the library",
+			"finished": false
 		}
 	]
 }

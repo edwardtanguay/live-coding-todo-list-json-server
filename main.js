@@ -15,19 +15,13 @@ const textElem = document.querySelector('.text');
 const btnAddElem = document.querySelector('.btnAdd');
 const tasksElem = document.querySelector('.tasks');
 
-const getTasks = () => {
-  return [
-    {
-      text: "task 1"
-    },
-    {
-      text: "task 2"
-    }
-  ]
+const getTasks = async () => {
+  const response = await fetch('http://localhost:5011/todos');
+  return response.json();
 };
 
-const renderList = () => {
-  const tasks = getTasks();
+const renderList = async () => {
+  const tasks = await getTasks();
   tasks.forEach(task => {
     const taskElem = document.createElement('div');
     taskElem.innerHTML = task.text;
