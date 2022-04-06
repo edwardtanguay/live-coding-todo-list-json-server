@@ -25,15 +25,11 @@ const renderList = async () => {
   tasksElem.innerHTML = '';
   const tasks = await getTasks();
   tasks.forEach(task => {
-    // const taskElem = document.createElement('div');
-    // taskElem.innerHTML = task.text;
-    // taskElem.classList.add('task');
-    // tasksElem.appendChild(taskElem);
 
     const taskElem = document.createElement('div');
     taskElem.setAttribute('data-id', task.id);
     taskElem.innerHTML = `
-   <input type="checkbox"/> 
+   <input type="checkbox" class="toggleFinished"/> 
    <div>${task.text}</div>
    <button class="btnDelete">delete</button>
     `;
@@ -42,6 +38,8 @@ const renderList = async () => {
   });
   textElem.value = '';
   textElem.focus();
+
+  // delete button events
   const deleteButtonElems = document.querySelectorAll('.btnDelete');
   deleteButtonElems.forEach(m => m.addEventListener('click', async (e) => {
     e.preventDefault();
@@ -53,6 +51,23 @@ const renderList = async () => {
     const response = await fetch(`http://localhost:5011/todos/${currentId}`, requestOptions);
     renderList();
   }));
+
+  // checkbox events
+  const checkboxElems = document.querySelectorAll('.toggleFinished');
+  checkboxElems.forEach(m => m.addEventListener('change', async () => {
+    const currentTaskElem = m.parentElement;
+    const currentId = currentTaskElem.dataset.id;
+    const requestOptions = {
+      method: 'PATCH',
+      body: JSON.stringify({ finished: true}),
+      headers: { "Content-type": "application/json; charset=UTF-8" }
+    };
+    const response = await fetch(`http://localhost:5011/todos/${currentId}`, requestOptions);
+    renderList();
+  }));
+
+
+
 };
 
 renderList();

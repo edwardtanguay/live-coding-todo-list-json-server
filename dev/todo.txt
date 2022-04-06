@@ -5,7 +5,9 @@
 
 - x put event on button
 	- x prevent default
-- .. delete button works
+- x delete button works
 
-
-- do checkbox
+- .. do checkbox
+	- create toggleFinished function
+		- toggle true/false
+		- json.server PUT
