@@ -6,3 +6,15 @@
   color: #2c3e50;
   margin-top: 60px;
 }
+
+.tasks {
+  display: flex;
+  justify-content: center;
+}
+
+.task {
+  background-color: #eee;
+  width: 220px;
+  margin: 5px 0 0 0;
+  padding: 10px;
+}

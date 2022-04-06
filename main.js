@@ -19,6 +19,7 @@ const renderList = () => {
   const taskElem = document.createElement('div');
   console.log(taskElem);
   taskElem.innerHTML = 'this is a task';
+  taskElem.classList.add('task');
   tasksElem.appendChild(taskElem);
 }
 
