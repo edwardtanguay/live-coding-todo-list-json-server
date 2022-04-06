@@ -1,14 +1,14 @@
 {
   "todos": [
     {
-      "text": "visit friends",
-      "finished": true,
-      "id": 27
-    },
-    {
       "text": "learn Postman",
       "finished": true,
       "id": 28
+    },
+    {
+      "text": "learn more CSS",
+      "finished": true,
+      "id": 29
     }
   ]
 }
