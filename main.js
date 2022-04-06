@@ -32,7 +32,7 @@ const renderList = async () => {
     // tasksElem.appendChild(taskElem);
 
     const taskElem = document.createElement('div');
-    taskElem.setAttribute('id', task.id);
+    taskElem.setAttribute('data-id', task.id);
     taskElem.innerHTML = `
    <input type="checkbox"/> 
    <div>${task.text}</div>
