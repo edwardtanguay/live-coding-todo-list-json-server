@@ -23,6 +23,7 @@ const getTasks = async () => {
 };
 
 const renderList = async () => {
+  tasksElem.innerHTML = '';
   const tasks = await getTasks();
   tasks.forEach(task => {
     const taskElem = document.createElement('div');
@@ -30,6 +31,8 @@ const renderList = async () => {
     taskElem.classList.add('task');
     tasksElem.appendChild(taskElem);
   });
+  textElem.value = '';
+  textElem.focus();
 };
 
 renderList();
@@ -48,5 +51,5 @@ btnAddElem.addEventListener('click', async (e) => {
     headers: { "Content-type": "application/json; charset=UTF-8" }
   };
   const response = await fetch('http://localhost:5011/todos', requestOptions);
-  return await response.json();
+  renderList();
 });
