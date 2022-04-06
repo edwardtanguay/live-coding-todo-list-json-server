@@ -5,9 +5,13 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "api": "json-server --watch ./data/data.json --port 5011"
   },
   "devDependencies": {
     "vite": "^2.9.0"
+  },
+  "dependencies": {
+    "json-server": "^0.17.0"
   }
 }
