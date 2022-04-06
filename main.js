@@ -28,6 +28,7 @@ const renderList = async () => {
 
     const taskElem = document.createElement('div');
     taskElem.setAttribute('data-id', task.id);
+    taskElem.setAttribute('data-finished', task.finished);
     taskElem.innerHTML = `
    <input type="checkbox" class="toggleFinished"/> 
    <div>${task.text}</div>
@@ -57,9 +58,10 @@ const renderList = async () => {
   checkboxElems.forEach(m => m.addEventListener('change', async () => {
     const currentTaskElem = m.parentElement;
     const currentId = currentTaskElem.dataset.id;
+    const currentFinished = currentTaskElem.dataset.finished === 'true' ? true : false;
     const requestOptions = {
       method: 'PATCH',
-      body: JSON.stringify({ finished: true}),
+      body: JSON.stringify({ finished: !currentFinished}),
       headers: { "Content-type": "application/json; charset=UTF-8" }
     };
     const response = await fetch(`http://localhost:5011/todos/${currentId}`, requestOptions);

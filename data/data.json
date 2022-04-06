@@ -2,12 +2,12 @@
   "todos": [
     {
       "text": "visit friends",
-      "finished": true,
+      "finished": false,
       "id": 27
     },
     {
       "text": "learn Postman",
-      "finished": true,
+      "finished": false,
       "id": 28
     }
   ]
