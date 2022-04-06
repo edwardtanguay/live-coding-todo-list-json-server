@@ -30,7 +30,7 @@ const renderList = async () => {
     taskElem.setAttribute('data-id', task.id);
     taskElem.setAttribute('data-finished', task.finished);
     taskElem.innerHTML = `
-   <input type="checkbox" class="toggleFinished"/> 
+   <input type="checkbox" ${task.finished ? 'checked' : ''} class="toggleFinished"/> 
    <div>${task.text}</div>
    <button class="btnDelete">delete</button>
     `;

@@ -2,7 +2,7 @@
   "todos": [
     {
       "text": "visit friends",
-      "finished": false,
+      "finished": true,
       "id": 27
     },
     {
