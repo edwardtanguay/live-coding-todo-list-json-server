@@ -18,7 +18,6 @@ const tasksElem = document.querySelector('.tasks');
 const getTasks = async () => {
   const response = await fetch('http://localhost:5011/todos');
   const data = await response.json();
-  console.log(data);
   return data;
 };
 
@@ -47,7 +46,7 @@ const renderList = async () => {
   deleteButtonElems.forEach(m => m.addEventListener('click', async (e) => {
     e.preventDefault();
     const currentTaskElem = m.parentElement;
-    const currentId = currentTaskElem.getAttribute('id');
+    const currentId = currentTaskElem.dataset.id;
     const requestOptions = {
       method: 'DELETE'
     };

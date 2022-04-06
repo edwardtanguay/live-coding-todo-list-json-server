@@ -1,14 +1,14 @@
 {
   "todos": [
     {
-      "id": 23,
-      "text": "go to the library",
-      "finished": false
-    },
-    {
       "text": "go to museum",
       "finished": false,
       "id": 25
+    },
+    {
+      "text": "visit friends",
+      "finished": false,
+      "id": 27
     }
   ]
 }
