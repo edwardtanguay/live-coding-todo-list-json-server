@@ -1,13 +1,5 @@
 import './style.css'
 
-const textElem = document.querySelector('.text');
-const btnAddElem = document.querySelector('.btnAdd');
-const tasksElem = document.querySelector('.tasks');
-
-const renderList = () => {
-  
-}
-
 document.querySelector('#app').innerHTML = `
   <h1>Todo App</h1>
 <form>
@@ -19,4 +11,17 @@ document.querySelector('#app').innerHTML = `
 </form>
 `;
 
+const textElem = document.querySelector('.text');
+const btnAddElem = document.querySelector('.btnAdd');
+const tasksElem = document.querySelector('.tasks');
+
+const renderList = () => {
+  const taskElem = document.createElement('div');
+  console.log(taskElem);
+  taskElem.innerHTML = 'this is a task';
+  tasksElem.appendChild(taskElem);
+}
+
+
+renderList();
 
