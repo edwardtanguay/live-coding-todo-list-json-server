@@ -1,18 +1,18 @@
 {
-  "name": "live-coding-todo-list-json-server",
-  "private": true,
-  "version": "0.0.0",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "api": "json-server --watch ./data/data.json --port 5011",
-    "start": "run-p api dev"
-  },
-  "devDependencies": {
-    "vite": "^2.9.0"
-  },
-  "dependencies": {
-    "json-server": "^0.17.0"
-  }
+	"name": "live-coding-todo-list-json-server",
+	"private": true,
+	"version": "0.0.0",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "vite preview",
+		"api": "json-server --watch ./data/data.json --port 5011",
+		"start": "run-p api dev"
+	},
+	"devDependencies": {
+		"vite": "^2.9.0"
+	},
+	"dependencies": {
+		"json-server": "^0.17.0"
+	}
 }
