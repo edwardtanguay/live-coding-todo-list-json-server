@@ -3,12 +3,17 @@
     {
       "text": "learn Postman",
       "finished": true,
-      "id": 28
+      "id": 30
     },
     {
-      "text": "learn more CSS",
+      "text": "learn Vite",
       "finished": true,
-      "id": 29
+      "id": 31
+    },
+    {
+      "text": "learn Svelte",
+      "finished": true,
+      "id": 32
     }
   ]
 }

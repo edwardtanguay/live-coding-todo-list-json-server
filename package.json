@@ -6,7 +6,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "api": "json-server --watch ./data/data.json --port 5011"
+    "api": "json-server --watch ./data/data.json --port 5011",
+    "start": "run-p api dev"
   },
   "devDependencies": {
     "vite": "^2.9.0"

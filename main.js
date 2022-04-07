@@ -68,8 +68,6 @@ const renderList = async () => {
     renderList();
   }));
 
-
-
 };
 
 renderList();
